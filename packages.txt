@@ -1,0 +1,10 @@
+flask
+requests
+feedparser
+matplotlib
+nltk
+wordcloud
+praw
+scikit-learn
+spacy
+numpy

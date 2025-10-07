@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Real-Time Trending Topic Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h2>🧠 Real-Time Multi-Source Trending Topic Detection</h2>
+  <p>Enter a keyword and time period to analyze trends from Reddit, GNews, NewsAPI, and RSS.</p>
+
+  <div class="input-section">
+    <input id="keyword" placeholder="Enter keyword..." />
+    <select id="period">
+      <option>Day</option>
+      <option>Week</option>
+      <option>Month</option>
+      <option>Year</option>
+    </select>
+    <button onclick="analyze()">Analyze</button>
+  </div>
+
+  <div id="loading" style="display:none;">⏳ Analyzing, please wait...</div>
+  <div id="output"></div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
