@@ -21,9 +21,18 @@ def analyze():
         print(f"❌ Backend error: {e}")
         return jsonify({"result": f"<b>Error:</b> {e}"})
 
+from flask import Flask
+import os
 
-if __name__ == "__main__":
-    app.run(debug=True)
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Hello, Render! Flask app is running."
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))  # Render gives you a port
+    app.run(host='0.0.0.0', port=port, debug=True)
 
 
 import os
